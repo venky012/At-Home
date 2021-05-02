@@ -31,3 +31,29 @@
 {
 	min-height: 450px;
 }
+
+.card{
+	height: 500px;
+	border-radius: 15px !important;
+	background-color: rgba(0,0,0,0.4) !important;
+}
+
+.msg_card_body{
+	overflow-y: auto;
+}
+
+.card-footer{
+	border-radius: 0 0 15px 15px !important;
+		border-top: 0 !important;
+}
+
+.msg{
+	margin-top: auto;
+	margin-bottom: auto;
+	margin-right: 10px;
+	border-radius: 25px;
+	background-color: #82ccdd;
+	padding: 10px;
+	position: relative;
+}
+
