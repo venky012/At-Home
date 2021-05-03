@@ -98,16 +98,17 @@ class ChatPage extends Component {
 
     return (
       <div>
-        <div className = "card">
+        <div className = "card-custom">
         <AppNavbar />
         <Paper>
+          <br/>
           <Typography variant="h5" component="h5">
             {this.props.order ? <div >You are talking to {talking_to}</div> : null}
           </Typography>
-          <Paper style={{ maxheight:"50%", width: "50%", marginLeft: "30%" }}>
+          <Paper style={{ maxheight:"50%", width: "70%", margin: "auto" }}>
             <div className="card-header msg_card_body" >
             <div style={{borderBottom: '1.5px solid rgba(0,0,0,0.14)', maxHeight: 500, width: '100%' }} className="scrollbar" id="style-1">
-              {this.props.message ? this.props.message.messages.map(mess => <div className="msg" style={mess.from === this.props.auth.user._id ? stylesRight : stylesLeft}><Chip label={mess.message} /></div>) : null}
+              {this.props.message ? this.props.message.messages.map(mess => <div style={mess.from === this.props.auth.user._id ? stylesRight : stylesLeft}><Chip label={mess.message} /></div>) : null}
             </div>
             </div>
             <div className="card-footer">
@@ -115,7 +116,7 @@ class ChatPage extends Component {
                 label="Send a message"
                 name="message"
                 onChange={this.changeTextValue}
-                style={{backgroundColor: "rgba(0,0,0,0.3)" ,width: '90%'}}
+                style={{width: '90%'}}
               />
               {!this.props.message.isLoading ? <Button
                 onClick={(e) => this.submitingmessage(e, user_id, professional_id)}
