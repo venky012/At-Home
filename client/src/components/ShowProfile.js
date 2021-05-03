@@ -18,6 +18,8 @@ import { ButtonToolbar } from 'react-bootstrap';
 import PropTypes from 'prop-types'
 import ReactTimeout from "react-timeout";
 
+const baseUrl = process.env.REACT_APP_BASE_URL;
+
 class ShowProfile extends Component {
   async componentDidMount() {
     await this.props.loadUser();
@@ -59,7 +61,7 @@ class ShowProfile extends Component {
 
   getReviews(id) {
     console.log(id)
-    var url = 'http://localhost:3000/api/reviews/user/reviews/';
+    var url = `${baseUrl}/api/reviews/user/reviews/`;
     const ser = url.concat(id)
     fetch(ser)
       .then(response => response.json())
@@ -68,7 +70,7 @@ class ShowProfile extends Component {
 
   getNames(id) {
 
-    var url1 = 'http://localhost:3000/api/reviews/user_names/profile/';
+    var url1 = `${baseUrl}/api/reviews/user_names/profile/`;
     const ser1 = url1.concat(id)
     fetch(ser1)
       .then(response => response.json())

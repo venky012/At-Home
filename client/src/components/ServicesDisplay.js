@@ -6,6 +6,8 @@ import ScrollUpButton from "react-scroll-up-button";
 import AppNavbar from'./AppNavbar';
 import Footer from './Footer'
 
+const baseUrl = process.env.REACT_APP_BASE_URL;
+
 class ServicesDisplay extends Component{
   state = {
     all_services:[],
@@ -17,13 +19,13 @@ class ServicesDisplay extends Component{
   }
 
   getAllServices = () => {
-		fetch('http://localhost:3000/api/service/all')
+		fetch(`${baseUrl}/api/service/all`)
 		 .then(response => response.json())
      .then(data => this.setState({ all_services: data }))
   }
 
   getAllServices1 = () => {
-		fetch('http://localhost:3000/api/service/all')
+		fetch(`${baseUrl}/api/service/all`)
 		 .then(response => response.json())
      .then(data => this.setState({ disp_services: data }))
   }

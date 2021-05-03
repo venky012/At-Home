@@ -11,7 +11,7 @@ import {
 
 
 import PropTypes from 'prop-types'
-
+const baseUrl = process.env.REACT_APP_BASE_URL;
 
 
 class Slot extends Component {
@@ -31,7 +31,7 @@ class Slot extends Component {
   }
 
   getDates() {
-    fetch('http://localhost:3000/api/slot/dates')
+    fetch(`${baseUrl}/api/slot/dates`)
       .then(response => response.json())
       .then(data => this.setState({ all_dates: data }))
   }

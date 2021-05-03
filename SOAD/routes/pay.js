@@ -3,6 +3,9 @@ const mongoose = require('mongoose');
 const express = require('express');
 const router = express.Router();
 const Order = require('../Models/Order').Order;
+
+const baseUrl = process.env.REACT_APP_BASE_URL;
+
 const config = {
     MID : 'paXgGX93917473089891', // Get this from Paytm console
     KEY : 'J1KbAQLigbn#@01h', // Get this from Paytm console
@@ -10,7 +13,7 @@ const config = {
     CHANNEL_ID : 'WEB',
     INDUSTRY : 'Retail',
     WEBSITE : 'WEBSTAGING',
-    CALLBACK_URL : 'http://localhost:3000/paytm/webhook',  // webhook url for verifying payment
+    CALLBACK_URL : `${baseUrl}/paytm/webhook`,  // webhook url for verifying payment
 }
 
 
@@ -49,7 +52,7 @@ router.get('/:order_id/:user_id/:total_cost', async(req, res) => {
              ORDER_ID: '#########',
              CUST_ID: '#########',
              TXN_AMOUNT: '##',
-             CALLBACK_URL: 'localhost:3000/paytm/webhook',
+             CALLBACK_URL: `${baseUrl}/paytm/webhook`,
              INDUSTRY_TYPE_ID: 'Retail',
              url: 'https://securegw-stage.paytm.in/order/process',
              checksum: '####################################'

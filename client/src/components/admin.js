@@ -9,7 +9,7 @@ import {
 import AppNavbar from './AppNavbar';
 import Footer from './Footer'
 
-
+const baseUrl = process.env.REACT_APP_BASE_URL;
 
 class Admin extends Component {
   state = {
@@ -27,7 +27,7 @@ class Admin extends Component {
   }
 
   getDetails = () => {
-    fetch('http://localhost:3000/api/users/adetails')
+    fetch(`${baseUrl}/api/users/adetails`)
       .then(response => response.json())
       .then(data => this.setState({ details: data }))
   }

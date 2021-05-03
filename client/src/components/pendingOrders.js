@@ -20,6 +20,9 @@ import { TiTick } from "react-icons/ti";
 import AppNavbar from './AppNavbar'
 import Footer from './Footer'
 import Container1 from './Container1'
+
+const baseUrl = process.env.REACT_APP_BASE_URL;
+
 class pendingOrders extends Component{
 
   constructor(props)
@@ -44,7 +47,7 @@ class pendingOrders extends Component{
   myBookings=() =>{
 
     if(this.props.user){
-      var url = 'http://localhost:3000/api/users/mypendingpayments/';
+      var url = `${baseUrl}/api/users/mypendingpayments/`;
       const ser = url.concat(this.props.user._id)
       fetch(ser)
        .then(response => response.json())
@@ -157,7 +160,7 @@ return(
 
     <Col md="1">
       <a>
-      <Button href={"http://localhost:3000/api/payments/".concat(item.order_id).concat('/').concat(this.props.user._id).concat('/').concat(item.total_cost.toString())} onClick={() => {this.paying123(item.order_id, this.props.user._id, item.total_cost)}}  color="warning">
+      <Button href={`${baseUrl}/api/payments/`.concat(item.order_id).concat('/').concat(this.props.user._id).concat('/').concat(item.total_cost.toString())} onClick={() => {this.paying123(item.order_id, this.props.user._id, item.total_cost)}}  color="warning">
         Pay
       </Button>
     </a>

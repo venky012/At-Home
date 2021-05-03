@@ -19,6 +19,8 @@ import ReactTimeout from "react-timeout";
 import {FaUserAlt} from "react-icons/fa"
 import Container1 from './Container1'
 
+const baseUrl = process.env.REACT_APP_BASE_URL;
+
 class DisplayBooking extends Component{
   state = {
     flag:null,
@@ -63,7 +65,7 @@ class DisplayBooking extends Component{
   }
 
   onClickbutton = (order_id, user_id, total_cost) => {
-		const url = 'http://localhost:3000/api/payments/';
+		const url = `${baseUrl}/api/payments/`;
 		const ser = url.concat(order_id).concat('/').concat(user_id).concat('/').concat(total_cost.toString())
 			window.location.href=ser;
 	}

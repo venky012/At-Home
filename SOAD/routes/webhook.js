@@ -1,5 +1,7 @@
 const paytm = require('paytm-nodejs')
- 
+
+const baseUrl = process.env.REACT_APP_BASE_URL;
+
 const config = {
     MID : 'bPdqef86135815495874', // Get this from Paytm console
     KEY : 'P4h0OGPNnNit1E4C', // Get this from Paytm console
@@ -7,7 +9,7 @@ const config = {
     CHANNEL_ID : 'WAP',
     INDUSTRY : 'Retail',  
     WEBSITE : 'Default',
-    CALLBACK_URL : 'http://localhost:3000/paytm/webhook',  // webhook url for verifying payment
+    CALLBACK_URL : `${baseUrl}/paytm/webhook`,  // webhook url for verifying payment
 }
  
 // Webhook controller function

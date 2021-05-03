@@ -18,6 +18,9 @@ import AppNavbar from'./AppNavbar';
 import Footer from './Footer'
 import Container1 from './Container1'
 import '../styles/chatpage.css'
+
+const baseUrl = process.env.REACT_APP_BASE_URL;
+
 class Service extends React.Component{
 
 
@@ -45,7 +48,7 @@ class Service extends React.Component{
 
 	getServiceWorkers = (temp) => {
 		var service_clicked = temp;
-		var url = 'http://localhost:3000/api/professional/';
+		var url = `${baseUrl}/api/professional/`;
 		const ser = url.concat(service_clicked)
 		fetch(ser)
 		 .then(response => response.json())
@@ -56,7 +59,7 @@ class Service extends React.Component{
 
 	getService = (temp) => {
 		var service_clicked = temp;
-		var url = 'http://localhost:3000/api/service/';
+		var url = `${baseUrl}/api/service/`;
 		const ser = url.concat(service_clicked)
 		fetch(ser)
 		 .then(response => response.json())
@@ -65,7 +68,7 @@ class Service extends React.Component{
 
 	getServices = (temp) => {
 		var service_clicked = temp;
-		var url = 'http://localhost:3000/api/serviceType/';
+		var url = `${baseUrl}/api/serviceType/`;
 		const ser = url.concat(service_clicked)
 		fetch(ser)
 		 .then(response => response.json())
@@ -74,7 +77,7 @@ class Service extends React.Component{
 
 	getReviews = (temp) => {
 		var service_clicked = temp;
-		var url = 'http://localhost:3000/api/reviews/';
+		var url = `${baseUrl}/api/reviews/`;
 		const ser = url.concat(service_clicked)
 		fetch(ser)
 		 .then(response => response.json())
@@ -84,13 +87,13 @@ class Service extends React.Component{
 	getNames = (temp) => {
 
 		var service_clicked = temp;
-		var url = 'http://localhost:3000/api/reviews/user_names/';
+		var url = `${baseUrl}/api/reviews/user_names/`;
 		const ser = url.concat(service_clicked)
 		fetch(ser)
 		 .then(response => response.json())
 		 .then(data => this.setState({ user_names: data }))
 
-		var url1 = 'http://localhost:3000/api/reviews/prof_names/';
+		var url1 = `${baseUrl}/api/reviews/prof_names/`;
 		const ser1 = url1.concat(service_clicked)
 		fetch(ser1)
 		.then(response => response.json())

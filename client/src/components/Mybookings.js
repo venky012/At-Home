@@ -22,6 +22,8 @@ import { FaUserAlt } from "react-icons/fa";
 import { TiTick } from "react-icons/ti";
 import Container1 from './Container1'
 
+const baseUrl = process.env.REACT_APP_BASE_URL;
+
 class Mybookings extends Component{
 
   constructor(props)
@@ -54,7 +56,7 @@ class Mybookings extends Component{
   myBookings=() =>{
 
     if(this.props.user){
-      var url = 'http://localhost:3000/api/users/mybookings/';
+      var url = `${baseUrl}/api/users/mybookings/`;
       const ser = url.concat(this.props.user._id)
       fetch(ser)
        .then(response => response.json())
@@ -87,7 +89,7 @@ class Mybookings extends Component{
   check_review = () =>{
     console.log('in check review')
     // console.log(this.props.user._id)
-    var url = 'http://localhost:3000/api/reviews/user/reviews/';
+    var url = `${baseUrl}/api/reviews/user/reviews/`;
     const ser = url.concat(this.props.user._id)
     fetch(ser)
      .then(response => response.json())
