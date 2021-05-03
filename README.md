@@ -1,1 +1,3 @@
 # At-Home
+People often require home appliance services and many other services to their homes. Some of them cannot find such services nearby, especially when they are new to that place. Some of them cannot make appointments with the required services. 
+Our Solution For such kind of above problems, we have come up with an idea of At-Home, a web portal that enables users to avail of such services. Using At-Home a person can find service professionals like plumbers, electricians, carpenters, etc. A user gets nearby service professionals as their suggestions based on their locality. The user can book an appointment according to his/her availability. Our portal also suggests the best fare services to the users.
