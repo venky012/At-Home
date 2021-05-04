@@ -21,7 +21,7 @@ exports.webhook = function(req,res){
     res.write('</head>');
     res.write('<body onload="myFunction()">');
     res.write('<br><br><br><br><div style="text-align:center"><h1>Payment Succesful!</h1>')
-    res.write(`<h3><a href="${baseUrl}/mybookings">Go to bookings</a></h3></div>`)
+    res.write('<h3><a href="/mybookings">Go to bookings</a></h3></div>')
     res.write('</body>');
     res.write('</html>');
     

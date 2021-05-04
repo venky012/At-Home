@@ -241,7 +241,7 @@ return(
 
 
 <Modal isOpen={this.state.modal_toggle[item.order_id]} toggle={() => {this.toggle(item.order_id)}}>
-      <ModalHeader toggle={this.toggle}>Login</ModalHeader>
+      <ModalHeader toggle={this.toggle}>Add Review</ModalHeader>
       <ModalBody>
       <Form onSubmit={() =>{this.onSubmit(item.order_id, item.professional_id, item.user_id)}}>
         <FormGroup>

@@ -39,7 +39,7 @@ export default function StoreChat(props){
   const [allChats, dispatch]= React.useReducer(reducer, initState);
 
   if(!socket){
-    socket = io(':3000')
+    socket = io(':3001')
     socket.on('chat message', function(msg){
       dispatch({type:'RECEIVE_MESSAGE',payload:msg});
     })

@@ -21,17 +21,6 @@ import ReactTimeout from "react-timeout";
 const baseUrl = process.env.REACT_APP_BASE_URL;
 
 class ShowProfile extends Component {
-  async componentDidMount() {
-    await this.props.loadUser();
-    this.props.setTimeout(() => { this.getReviews(this.props.user._id) }, 200)
-    this.props.setTimeout(() => { this.getNames(this.props.user._id) }, 200)
-
-  }
-
-
-
-
-
   constructor(props) {
     super(props);
 
@@ -59,13 +48,21 @@ class ShowProfile extends Component {
     this.handleSubmit = this.handleSubmit.bind(this);
   }
 
+  async componentDidMount() {
+    await this.props.loadUser();
+    console.log("test")
+  }
+
   getReviews(id) {
     console.log(id)
     var url = `${baseUrl}/api/reviews/user/reviews/`;
     const ser = url.concat(id)
     fetch(ser)
       .then(response => response.json())
-      .then(data => this.setState({ reviews: data }))
+      .then(data => {
+        console.log(data)
+        this.setState({ reviews: data })
+      })
   }
 
   getNames(id) {
@@ -115,7 +112,10 @@ class ShowProfile extends Component {
   }
 
 
-  myfun2() {
+  async myfun2() {
+    console.log('test reviews');
+    await this.getReviews(this.props.user._id);
+    await this.getNames(this.props.user._id);
     this.setState(
       {
         content1: false,
@@ -157,10 +157,8 @@ class ShowProfile extends Component {
 
     const name = this.props.user ? this.props.user.name : null;
     const email = this.props.user ? this.props.user.email : null;
-    const profilepic = this.props.user && this.props.user.profilepic ? this.props.user.profilepic : '';
-    console.log(profilepic);
+    const profilepic = this.props.user && this.props.user.profilepic ? baseUrl + '/' + this.props.user.profilepic : '';
     let editprofileclose = () => this.setState({ editprofileshow: false });
-    console.log(this.state.reviews)
 
     if (!this.props.token) {
       // Logout
