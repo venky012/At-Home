@@ -76,7 +76,7 @@ class Myorders extends Component {
         <AppNavbar />
         <h1>My Orders</h1>
         <div style={{ marginLeft: '35%' }}>
-          <ButtonToolbar> <Button variant="outline-dark" onClick={() => { this.setPage('ctrlf') }}>From CtrlF</Button>
+          <ButtonToolbar> <Button variant="outline-dark" onClick={() => { this.setPage('ctrlf') }}>From AtHome</Button>
             <Button style={{ marginLeft: '5%' }} variant="outline-dark" onClick={() => { this.setPage('amazon') }}>From Amazon</Button>
             <Button style={{ marginLeft: '5%' }} variant="outline-dark" onClick={() => { this.setPage('other') }}>From Other</Button></ButtonToolbar>
         </div>
