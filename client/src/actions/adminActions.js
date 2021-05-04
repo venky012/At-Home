@@ -8,10 +8,11 @@ ADD_CITY,
 ADD_SERVICETYPE,
 SHOW_SERVICETYPE
 } from './types'
+const baseUrl = process.env.REACT_APP_BASE_URL;
 
 export const allServices = () => (dispatch,getState) => {
   dispatch({type:GET_SERVICES})
-  axios.get('/api/service/all')
+  axios.get(`${baseUrl}/api/service/all`)
     .then(res => dispatch({
       type: GET_SERVICES,
       payload:res.data
@@ -26,7 +27,7 @@ export const addService=({name,about,service_worker})=>dispatch=>{
     }
   }
   const body=JSON.stringify({name,about,service_worker})
-  axios.post('/api/service/',body,config)
+  axios.post(`${baseUrl}/api/service/`,body,config)
   .then(res=>dispatch({
     type:ADD_SERVICE,
     payload:res.data
@@ -42,7 +43,7 @@ export const addServiceType=({name,service_type,cost})=>dispatch=>{
     }
   }
   const body=JSON.stringify({name,service_type,cost})
-  axios.post('/api/serviceType/addType',body,config)
+  axios.post(`${baseUrl}/api/serviceType/addType`,body,config)
   .then(res=>dispatch({
     type:ADD_SERVICETYPE,
     payload:res.data
@@ -59,7 +60,7 @@ export const addSlot=({start,end})=>dispatch=>{
     }
   }
   const body=JSON.stringify({start,end})
-  axios.post('/api/slot/addslot',body,config)
+  axios.post(`${baseUrl}/api/slot/addslot`,body,config)
   .then(res=>dispatch({
     type:ADD_SLOT,
     payload:res.data
@@ -76,7 +77,7 @@ export const addCity=({city,lat,lng})=>dispatch=>{
     }
   }
   const body=JSON.stringify({city,lat,lng})
-  axios.post('/api/location/addloco',body,config)
+  axios.post(`${baseUrl}/api/location/addloco`,body,config)
   .then(res=>dispatch({
     type:ADD_CITY,
     payload:res.data
@@ -92,7 +93,7 @@ export const getserviceType=(service)=>dispatch=>{
         'Content-Type':'application/json'
       }
     }
-    var url = '/api/serviceType/';
+    var url = `${baseUrl}/api/serviceType/`;
     const ser = url.concat(service);
     axios.get(ser,config)
       .then(res => {

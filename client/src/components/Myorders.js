@@ -84,8 +84,8 @@ class Myorders extends Component {
           this.state.from_ctrlf ?
             <div style={{ alignContent: 'center', marginTop: '20px' }}>
               <h3>From CtrlF</h3>
-              <Container>
-                <Row style={{ borderTop: '1px solid #EDE8FF', borderBottom: '1px solid #EDE8FF', padding: '10px 10px' }}>
+              <Container style={{backgroundColor:"grey",borderColor:"blanchedalmond",borderStyle:"inset outset"}}>
+                <Row style={{color:"lightgoldenrodyellow", borderTop: '1px solid #EDE8FF', borderBottom: '1px solid #EDE8FF', padding: '10px 10px'}}>
                   <Col md="1"><b>Date</b></Col>
                   <Col md="2"><b>Services Chosen</b></Col>
                   <Col md="3"><b>Address</b></Col>

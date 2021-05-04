@@ -17,11 +17,11 @@ exports.webhook = function(req,res){
     res.write('<html>');
     res.write('<head>');
     res.write('<title>Success Page</title>');
-    res.write('<script>    function myFunction() {     window.location.href="http://localhost:3001/";    }    </script>')
+    res.write(`<script>    function myFunction() {     window.location.href=${baseUrl};    }    </script>`)
     res.write('</head>');
     res.write('<body onload="myFunction()">');
     res.write('<br><br><br><br><div style="text-align:center"><h1>Payment Succesful!</h1>')
-    res.write('<h3><a href="http://localhost:3001/mybookings">Go to bookings</a></h3></div>')
+    res.write(`<h3><a href="${baseUrl}/mybookings">Go to bookings</a></h3></div>`)
     res.write('</body>');
     res.write('</html>');
     

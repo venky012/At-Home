@@ -2,6 +2,7 @@ import {GET_SERVICETYPES, GET_SERVICE, STORE_ORDER,SERVICETYPES_LOADING} from '.
 import axios from 'axios';
 
 
+const baseUrl = process.env.REACT_APP_BASE_URL;
 
 
 export const get_services=(service)=>dispatch=>{
@@ -13,7 +14,7 @@ export const get_services=(service)=>dispatch=>{
     }
   }
 
-  var url = '/api/serviceType/';
+  var url = `${baseUrl}/api/serviceType/`;
   dispatch({type:SERVICETYPES_LOADING})
   const ser = url.concat(service);
   axios.get(ser,config)
@@ -39,7 +40,7 @@ export const store_order = (selected_services) => dispatch => {
   const body=JSON.stringify(selected_services)
   console.log(`qwerty store ${body}`)
   axios
-    .post('/api/order/makeorder',body,config)
+    .post(`${baseUrl}/api/order/makeorder`,body,config)
     .then(res =>
       dispatch({
         type: STORE_ORDER,

@@ -1,5 +1,6 @@
 import axios from 'axios'
 import {SEND_LOCATION,GET_CITIES,SELECT_CITY,GET_ORDER,ORDER_LOADING} from './types'
+const baseUrl = process.env.REACT_APP_BASE_URL;
 
 export const bookSlot = (id,lat,lng,address,city) => dispatch => {
     const config={
@@ -9,7 +10,7 @@ export const bookSlot = (id,lat,lng,address,city) => dispatch => {
     }
     const body=JSON.stringify({id,lat,lng,address,city})
     axios
-      .post('/api/booking/booking',body,config)
+      .post(`${baseUrl}/api/booking/booking`,body,config)
       .then(res =>
         dispatch({
           type: SEND_LOCATION,
@@ -22,7 +23,7 @@ export const bookSlot = (id,lat,lng,address,city) => dispatch => {
 export const getCities = () => dispatch => {
 
   axios
-    .get('/api/location/cities')
+    .get(`${baseUrl}/api/location/cities`)
     .then(res =>
       dispatch({
         type: GET_CITIES,
@@ -55,7 +56,7 @@ export const getOrder = (id) => dispatch => {
   dispatch({type:ORDER_LOADING})
   const body=JSON.stringify({id})
   axios
-    .post('/api/booking/getOrder',body,config)
+    .post(`${baseUrl}/api/booking/getOrder`,body,config)
     .then(res =>
       dispatch({
         type: GET_ORDER,

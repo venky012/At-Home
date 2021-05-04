@@ -5,6 +5,7 @@ GET_MESSAGES,
 SEND_MESSAGE,
 MESSAGES_LOADING
 } from './types'
+const baseUrl = process.env.REACT_APP_BASE_URL;
 
 export const sendMessage = (from,to,message) => dispatch => {
   const config={
@@ -14,7 +15,7 @@ export const sendMessage = (from,to,message) => dispatch => {
   }
   let body= JSON.stringify({from,to,message})
   console.log(body)
-  axios.post('/api/booking/chat',body,config)
+  axios.post(`${baseUrl}/api/booking/chat`,body,config)
     .then(res => dispatch({
       type: SEND_MESSAGE,
       payload:res.data
@@ -29,7 +30,7 @@ export const getMessages = (user_id,professional_id) => dispatch => {
   }
   let body= JSON.stringify({user_id,professional_id})
   console.log(body)
-  axios.post('/api/booking/getmessages',body,config)
+  axios.post(`${baseUrl}/api/booking/getmessages`,body,config)
     .then(res => dispatch({
       type: GET_MESSAGES,
       payload:res.data

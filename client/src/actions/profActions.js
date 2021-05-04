@@ -11,6 +11,7 @@ MY_ORDERS,
 IS_AVAILABLE,
 UPDATE_AVAILABLE
 } from './types'
+const baseUrl = process.env.REACT_APP_BASE_URL;
 
 
 export const createProfessional=({user,profession,phonenumber,city})=>(dispatch,getState)=>{
@@ -25,7 +26,7 @@ export const createProfessional=({user,profession,phonenumber,city})=>(dispatch,
 if(token){
   config.headers['x-auth-token']=token
   const body=JSON.stringify({user,profession,phonenumber,city})
-  axios.post('/api/professional',body,config)
+  axios.post(`${baseUrl}/api/professional`,body,config)
   .then(res=>dispatch({
     type:CREATE_PROFESSIONAL_SUCCESS,
     payload:res.data
@@ -42,7 +43,7 @@ if(token){
 
 export const isAvailable = () => (dispatch,getState) => {
   // User Loading
-  axios.get('/api/professional/isAvailable',tokenConfig(getState))
+  axios.get(`${baseUrl}/api/professional/isAvailable`,tokenConfig(getState))
     .then(res => dispatch({
       type:IS_AVAILABLE,
       payload:res.data
@@ -53,7 +54,7 @@ export const isAvailable = () => (dispatch,getState) => {
 
 export const isProf = () => (dispatch,getState) => {
   // User Loading
-  axios.get('/api/professional/isProfessional',tokenConfig(getState))
+  axios.get(`${baseUrl}/api/professional/isProfessional`,tokenConfig(getState))
     .then(res => dispatch({
       type:IS_PROFESSIONAL_TRUE,
       payload:res.data
@@ -78,7 +79,7 @@ export const isProf = () => (dispatch,getState) => {
 export const getProfessions = () => dispatch => {
   
   axios
-    .get('/api/professional/professions')
+    .get(`${baseUrl}/api/professional/professions`)
     .then(res =>
       dispatch({
         type: GET_PROFESSIONS,
@@ -96,7 +97,7 @@ export const sendLocation = (user_id,lat,lng,address,city) => dispatch => {
   }
   const body=JSON.stringify({user_id,lat,lng,address,city})
   axios
-    .post('/api/professional/saveAddress',body,config)
+    .post(`${baseUrl}/api/professional/saveAddress`,body,config)
     .then(res =>
       dispatch({
         type: PROF_LOCATION,
@@ -114,7 +115,7 @@ export const myorders = (id) => dispatch => {
   }
   const body=JSON.stringify({id})
   axios
-    .post('/api/professional/myorders',body,config)
+    .post(`${baseUrl}/api/professional/myorders`,body,config)
     .then(res =>
       dispatch({
         type: MY_ORDERS,
@@ -131,7 +132,7 @@ export const updateAvailable = (id) => dispatch => {
   }
   const body=JSON.stringify({id})
   axios
-    .post('/api/professional/updateAvailable',body,config)
+    .post(`${baseUrl}/api/professional/updateAvailable`,body,config)
     .then(res =>
       dispatch({
         type: UPDATE_AVAILABLE,

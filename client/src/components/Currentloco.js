@@ -99,7 +99,7 @@ class Currentloco extends React.Component {
               </tr>
               <tr>
                 <td>
-                <DropdownButton id="dropdown-basic-button" className="dd_btn"  title={this.state.city}>
+                <DropdownButton style={{borderLeftWidth:'0px'}} id="dropdown-basic-button" className="dd_btn"  title={this.state.city}>
 
                    {
                     this.props.all_cities?

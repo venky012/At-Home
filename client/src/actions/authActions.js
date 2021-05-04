@@ -14,12 +14,13 @@ MY_BOOKINGS,
 EDIT_PROFILE,
 ORDER_PAYMENT
 } from './types'
+const baseUrl = process.env.REACT_APP_BASE_URL;
 
 export const loadUser = () => (dispatch,getState) => {
   // User Loading
   console.log('running')
   dispatch({type:USER_LOADING})
-  axios.get('/api/users/loggedin',tokenConfig(getState))
+  axios.get(`${baseUrl}/api/users/loggedin`,tokenConfig(getState))
     .then(res => dispatch({
       type: USER_LOADED,
       payload:res.data
@@ -45,7 +46,7 @@ export const register=({name,email,password,profilepic,profilepicparse})=>dispat
   body.set("password",password);
   body.set("profilepic",profilepic);
 //const body=JSON.stringify({name,email,password})
-  axios.post('/api/users',body,config)
+  axios.post(`${baseUrl}/api/users`,body,config)
   .then(res=>dispatch({
     type:REGISTER_SUCCESS,
     payload:res.data
@@ -66,7 +67,7 @@ export const login=({email,password})=>dispatch=>{
     }
   }
   const body=JSON.stringify({email,password})
-  axios.post('/api/auth',body,config)
+  axios.post(`${baseUrl}/api/auth`,body,config)
   .then(res=>dispatch({
     type:LOGIN_SUCCESS,
     payload:res.data
@@ -114,7 +115,7 @@ export const mybookings = (id) => dispatch => {
   }
   const body=JSON.stringify({id})
   axios
-    .post('/api/users/mybookings',body,config)
+    .post(`${baseUrl}/api/users/mybookings`,body,config)
     .then(res =>
       dispatch({
         type: MY_BOOKINGS,
@@ -132,7 +133,7 @@ export const editProfile = (id,about,contact,email,address) => dispatch => {
   }
   const body=JSON.stringify({id,about,contact,email,address})
   axios
-    .post('/api/users/updateprofile',body,config)
+    .post(`${baseUrl}/api/users/updateprofile`,body,config)
     .then(res =>
       dispatch({
         type: EDIT_PROFILE,
@@ -149,7 +150,7 @@ export const editProfile = (id,about,contact,email,address) => dispatch => {
   }
   const body=JSON.stringify({order_id, user_id, total_cost})
   axios
-    .post('/api/payments/',body,config)
+    .post(`${baseUrl}/api/payments/`,body,config)
     .then(res =>
       dispatch({
         type: ORDER_PAYMENT,

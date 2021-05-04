@@ -77,6 +77,16 @@ class ShowProfile extends Component {
       .then(data => this.setState({ prof_names: data }))
 
   }
+  componentDidMount(){
+    if(this.props.user){
+      this.setState({
+        about: this.props.user.about,
+        contact: this.props.user.contact,
+        email: this.props.user.email,
+        address: this.props.user.address
+      })
+    }
+  }
 
 
   handleChange(event) {
@@ -198,7 +208,7 @@ class ShowProfile extends Component {
                                 <Input
                                   type="text"
                                   name="about"
-                                  value={this.state.value}
+                                  value={this.state.about}
                                   onChange={this.handleChange}
 
                                 />
@@ -210,7 +220,7 @@ class ShowProfile extends Component {
                                 <Input
                                   type="tel"
                                   name="contact"
-                                  value={this.state.value}
+                                  value={this.state.contact}
                                   onChange={this.handleChange}
 
                                 />
@@ -223,7 +233,7 @@ class ShowProfile extends Component {
                                 <Input
                                   type="email"
                                   name="email"
-                                  value={this.state.value}
+                                  value={this.state.email}
                                   onChange={this.handleChange}
 
                                 />
@@ -235,7 +245,7 @@ class ShowProfile extends Component {
                                 <Input
                                   type="text"
                                   name="address"
-                                  value={this.state.value}
+                                  value={this.state.address}
                                   onChange={this.handleChange}
 
                                 />
@@ -245,9 +255,9 @@ class ShowProfile extends Component {
 
                             </Form>
                             <div className="update_btn">
-                              <span className="update_btn1">   
-                              <Button onClick={this.handleSubmit}>Update</Button>
-                              <Button style={{marginLeft:'10px'}} onClick={this.toggle}>Cancel</Button>
+                              <span className="update_btn1">
+                                <Button onClick={this.handleSubmit}>Update</Button>
+                                <Button style={{ marginLeft: '10px' }} onClick={this.toggle}>Cancel</Button>
                               </span>
                             </div>
                           </Col>

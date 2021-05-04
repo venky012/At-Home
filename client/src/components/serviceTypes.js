@@ -160,12 +160,12 @@ return(
         <td>{item.service_type}</td>
         <td><FaRupeeSign />{item.cost}</td>
         <td>
-            <button variant="light"
+            <button variant="light" style={{borderRadius:"25%", opacity:"0.6"}}
             onClick={() => { this.changeQuantityminus(this.state.data_ser, item.service_type); }}
             >-</button>
 
                {' '}{item.quantity}{' '}
-            <button variant="light"
+            <button variant="light" style={{borderRadius:"25%", opacity:"0.6"}}
               onClick={() => { this.changeQuantityplus(this.state.data_ser, item.service_type); }}
             >+</button>
         </td>
@@ -177,11 +177,11 @@ return(
         <td>{item.service_type}</td>
         <td><FaRupeeSign />{item.cost}</td>
         <td>
-            <button variant="light"
+            <button variant="light" style={{borderRadius:"25%", opacity:"0.6"}}
             onClick={() => { this.changeQuantityminus(data_services, item.service_type); }}>-</button>
 
                {' '}{item.quantity}{' '}
-            <button variant="light"
+            <button variant="light" style={{borderRadius:"25%", opacity:"0.6"}}
               onClick={() => { this.changeQuantityplus(data_services, item.service_type); }}
             >+</button>
         </td>

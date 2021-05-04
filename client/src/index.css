@@ -88,9 +88,6 @@ code {
     width: 100%;
 }
 
-.update_profile{
-
-}
 .email{
     font-size: 75%;
     padding-top: 0px;
@@ -247,6 +244,7 @@ code {
   border-left: 1px solid gray;
   text-align: left;
   margin-left: 5%;
+  border-color: blanchedalmond;
 }
 .personal_info{
    font-size: 100%;
