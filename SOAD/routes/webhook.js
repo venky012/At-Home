@@ -1,6 +1,6 @@
 const paytm = require('paytm-nodejs')
 
-const baseUrl = 'https://elated-lovelace-401e9a.netlify.app/';
+const baseUrl = 'https://elated-lovelace-401e9a.netlify.app';
 
 const config = {
     MID : 'bPdqef86135815495874', // Get this from Paytm console
@@ -9,7 +9,7 @@ const config = {
     CHANNEL_ID : 'WAP',
     INDUSTRY : 'Retail',  
     WEBSITE : 'Default',
-    CALLBACK_URL : `${baseUrl}/paytm/webhook`,  // webhook url for verifying payment
+    CALLBACK_URL : 'http://localhost:3000/paytm/webhook',  // webhook url for verifying payment
 }
  
 // Webhook controller function
