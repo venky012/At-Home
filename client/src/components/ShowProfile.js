@@ -283,7 +283,6 @@ class ShowProfile extends Component {
               <div className="prof_btn">
                 <Button className="button_prof" onClick={this.myfun1}>About</Button><br /><br />
                 <Button className="button_prof" onClick={this.myfun2}>My Reviews</Button><br /><br />
-                <Button className="button_prof" onClick={this.myfun3}>Bookings</Button><br /><br />
                 <Button className="button_prof" onClick={this.myfun4}>Personal Information</Button>
               </div>
             </Col>
