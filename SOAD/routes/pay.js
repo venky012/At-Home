@@ -13,7 +13,7 @@ const config = {
     CHANNEL_ID : 'WEB',
     INDUSTRY : 'Retail',
     WEBSITE : 'WEBSTAGING',
-    CALLBACK_URL : `${baseUrl}/paytm/webhook`,  // webhook url for verifying payment
+    CALLBACK_URL : 'http://localhost:3000/paytm/webhook',  // webhook url for verifying payment
 }
 
 

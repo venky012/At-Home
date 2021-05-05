@@ -1,6 +1,6 @@
 const paytm = require('paytm-nodejs')
 
-const baseUrl = process.env.REACT_APP_BASE_URL;
+const baseUrl = 'https://elated-lovelace-401e9a.netlify.app/';
 
 const config = {
     MID : 'bPdqef86135815495874', // Get this from Paytm console
