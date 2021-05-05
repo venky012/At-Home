@@ -13,7 +13,7 @@ const config = {
     CHANNEL_ID : 'WEB',
     INDUSTRY : 'Retail',
     WEBSITE : 'WEBSTAGING',
-    CALLBACK_URL : 'http://elated-lovelace-401e9a.netlify.app/paytm/webhook',  // webhook url for verifying payment
+    CALLBACK_URL : 'http://20.198.70.86/paytm/webhook',  // webhook url for verifying payment
 }
 
 
