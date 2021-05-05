@@ -63,7 +63,7 @@ class pendingOrders extends Component {
   async componentDidMount() {
     await this.props.loadUser()
     this.props.setTimeout(this.myBookings, 200);
-    this.props.setTimeout(() => { this.setState({ isLoading: false }) }, 400)
+    this.props.setTimeout(() => { this.setState({ isLoading: false }) }, 200)
   }
 
   onChange = (e) => {

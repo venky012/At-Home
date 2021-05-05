@@ -49,7 +49,7 @@ sendAddress(markers,address){
 
 
       componentDidMount(){
-       this.props.setTimeout(()=>{this.setState({isLoading:false})},2000)
+       this.props.setTimeout(()=>{this.setState({isLoading:false})},200)
       }
 
 

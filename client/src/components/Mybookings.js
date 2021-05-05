@@ -109,9 +109,9 @@ class Mybookings extends Component{
     this.props.setTimeout(this.myBookings, 200);
     this.props.setTimeout(() => {this.modalToggle(this.state.order_list)}, 250);
     //if(this.props.user)
-    this.props.setTimeout(this.check_review, 500);
-    this.props.setTimeout(() => {this.review_bool(this.state.check_reviews, this.state.check_reviews_bool)}, 700);
-      this.props.setTimeout(() => {this.setState({isLoading:false})}, 400);
+    this.props.setTimeout(this.check_review, 200);
+    this.props.setTimeout(() => {this.review_bool(this.state.check_reviews, this.state.check_reviews_bool)}, 200);
+      this.props.setTimeout(() => {this.setState({isLoading:false})}, 200);
   }
 
   onChange=(e)=>{

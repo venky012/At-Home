@@ -24,7 +24,7 @@ import Container1 from './Container1'
 class HomePageContent extends Component {
 	state = { isLoading: true }
 	componentDidMount() {
-		this.props.setTimeout(() => { this.setState({ isLoading: false }) }, 400)
+		this.props.setTimeout(() => { this.setState({ isLoading: false }) }, 200)
 	}
 
 	render() {

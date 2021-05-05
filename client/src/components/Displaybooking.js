@@ -36,7 +36,7 @@ class DisplayBooking extends Component{
 
  async componentDidMount(){
   this.props.setTimeout(this.myBookings, 200);
-  this.props.setTimeout(()=>{this.setState({isLoading:false})},2000)
+  this.props.setTimeout(()=>{this.setState({isLoading:false})},200)
 }
 
 

@@ -76,12 +76,10 @@ class Myorders extends Component {
         <AppNavbar />
         <h1>My Orders</h1>
         <div style={{ marginLeft: '35%' }}>
-          <ButtonToolbar> <Button variant="outline-dark" onClick={() => { this.setPage('ctrlf') }}>From AtHome</Button></ButtonToolbar>
         </div>
         {
           this.state.from_ctrlf ?
             <div style={{ alignContent: 'center', marginTop: '20px' }}>
-              <h3>From CtrlF</h3>
               <Container style={{backgroundColor:"grey",borderColor:"blanchedalmond",borderStyle:"inset outset"}}>
                 <Row style={{color:"lightgoldenrodyellow", borderTop: '1px solid #EDE8FF', borderBottom: '1px solid #EDE8FF', padding: '10px 10px'}}>
                   <Col md="1"><b>Date</b></Col>

@@ -45,7 +45,7 @@ async componentDidMount()
   await this.props.loadUser();
   this.props.setTimeout(this.clearNotifi,10)
   this.props.setTimeout(this.getNotifi,10)
-  this.props.setTimeout(()=>{this.setState({isLoading:false})},400)
+  this.props.setTimeout(()=>{this.setState({isLoading:false})},200)
 
 }
 
