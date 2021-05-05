@@ -1,6 +1,6 @@
 const paytm = require('paytm-nodejs')
 
-const baseUrl = process.env.REACT_APP_BASE_URL;
+const baseUrl = 'https://elated-lovelace-401e9a.netlify.app';
 
 const config = {
     MID : 'bPdqef86135815495874', // Get this from Paytm console
@@ -9,7 +9,7 @@ const config = {
     CHANNEL_ID : 'WAP',
     INDUSTRY : 'Retail',  
     WEBSITE : 'Default',
-    CALLBACK_URL : `${baseUrl}/paytm/webhook`,  // webhook url for verifying payment
+    CALLBACK_URL : 'http://20.198.70.86/paytm/webhook',  // webhook url for verifying payment
 }
  
 // Webhook controller function
@@ -21,7 +21,7 @@ exports.webhook = function(req,res){
     res.write('</head>');
     res.write('<body onload="myFunction()">');
     res.write('<br><br><br><br><div style="text-align:center"><h1>Payment Succesful!</h1>')
-    res.write('<h3><a href="/mybookings">Go to bookings</a></h3></div>')
+    res.write(`<h3><a href="${baseUrl}/mybookings">Go to bookings</a></h3></div>`)
     res.write('</body>');
     res.write('</html>');
     
