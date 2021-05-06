@@ -69,7 +69,7 @@ cd At-Home/
 # you need two terminals to run our project one for running the nodejs server and other for running reactjs server
 
 # in first terminal go to backend folder 
-cd SOAD/
+cd EAD/
 
 # install the node dependencies
 # check if it asks for `npm audit fix`
