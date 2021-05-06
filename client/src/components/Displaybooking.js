@@ -85,7 +85,7 @@ const address = this.props.order?this.props.order.address:null;
 const city = this.props.order?this.props.order.city:null;
 const user_id = this.props.order?this.props.order.user_id:null;
 const professional_id = this.props.order?this.props.order.professional_id:null;
-const prof_pic = this.props.order?this.props.order.prof_image:null
+const prof_pic = this.props.order ? baseUrl + '/' + this.props.order.prof_image:null
 const user_pic = this.props.order?this.props.order.user_image:null
 var ser_cho = []
 for(var i in services_chosen){
