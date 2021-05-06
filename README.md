@@ -6,6 +6,18 @@ People often require home appliances services and many other services to their h
 ### Introduction
 We came up with an idea of At-Home, a web portal that enables users to avail of such services. Using At-Home a person can find service professionals like plumbers, electricians, carpenters, etc. A user gets nearby service professionals as their suggestions based on their locality. The user can book an appointment according to his/her availability. Our portal also suggests the best fare services to the users.
 
+- hosted Site : [https://elated-lovelace-401e9a.netlify.app/](https://elated-lovelace-401e9a.netlify.app/)
+
+### Registered Users (for testing)
+
+- Service Provider :
+  - Email : test@test.com
+  - Password : testpassword
+
+- Admin :
+  - Email : venkatesh.p18@iiits.in
+  - Password : testpassword
+
 ### Features
 - User Authentication
 - Admin features
