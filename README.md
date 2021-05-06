@@ -73,13 +73,13 @@ We came up with an idea of At-Home, a web portal that enables users to avail of 
 - Poojari Venkatesh
   - <b>EAD Features</b> : <br>
   React Hosting, Continuous integration, Continuous Deployment, Authorization, Single sign-on, Application level Security, Asynchronous Processing
-  - <b>Website Features</b>: 
+  - <b>Website Features</b>: <br>
   User Authentication, Worked on User and Service Provider API’s, Payment gateway integration, Home Page UI, Profile Page, getting Notifications, chat page, list Service Providers, Review and their Details, React Frontend Development and Redux implementation. Frontend & Backend Integration.
 
 - Pabbisetty Sri Ranga
-	- <b>EAD Features</b> :
+	- <b>EAD Features</b> : <br>
   Node hosting on VM’s, Load Balancer, Disaster Recovery,  Authorization, User Specific Data Sources,  Asynchronous Processing, Scalability features
-  - <b>Website Features</b> :<br> 
+  - <b>Website Features</b> : <br> 
   Admin Features like adding Services, Service Types, Places, Time slots and Time slot management, Service Booking  along with Payment processing and  management, Frontend and Backend Integration, Redux Development, API management, React frontend development, UI for booking related pages, Bug fixes in Booking display and Chat pages.
 
 - Paidala Vikranth Reddy
