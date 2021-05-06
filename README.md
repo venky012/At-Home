@@ -7,6 +7,7 @@ People often require home appliances services and many other services to their h
 We came up with an idea of At-Home, a web portal that enables users to avail of such services. Using At-Home a person can find service professionals like plumbers, electricians, carpenters, etc. A user gets nearby service professionals as their suggestions based on their locality. The user can book an appointment according to his/her availability. Our portal also suggests the best fare services to the users.
 
 - hosted Site : [https://elated-lovelace-401e9a.netlify.app/](https://elated-lovelace-401e9a.netlify.app/)
+- [Presentation Slides](https://docs.google.com/presentation/d/16qgpClBCGWpXswHSQcu1boGJhobbbwjCKjG5VjTKI44/edit?usp=sharing) 
 
 ### Registered Users (for testing)
 
@@ -66,6 +67,38 @@ We came up with an idea of At-Home, a web portal that enables users to avail of 
   - Application level Security
   - User Specific Data Sources
 - We will achieve this using the “JWT Authentication Tokens”.
+
+### Work Distribution
+
+- Poojari Venkatesh
+  - <b>EAD Features</b> : <br>
+  React Hosting, Continuous integration, Continuous Deployment, Authorization, Single sign-on, Application level Security, Asynchronous Processing
+  - <b>Website Features</b>: 
+  User Authentication, Worked on User and Service Provider API’s, Payment gateway integration, Home Page UI, Profile Page, getting Notifications, chat page, list Service Providers, Review and their Details, React Frontend Development and Redux implementation. Frontend & Backend Integration.
+
+- Pabbisetty Sri Ranga
+	- <b>EAD Features</b> :
+  Node hosting on VM’s, Load Balancer, Disaster Recovery,  Authorization, User Specific Data Sources,  Asynchronous Processing, Scalability features
+  - <b>Website Features</b> :<br> 
+  Admin Features like adding Services, Service Types, Places, Time slots and Time slot management, Service Booking  along with Payment processing and  management, Frontend and Backend Integration, Redux Development, API management, React frontend development, UI for booking related pages, Bug fixes in Booking display and Chat pages.
+
+- Paidala Vikranth Reddy
+	- <b>EAD Features</b> :<br> 
+  Node hosting on VM’s ,  Load Balancer ,  Asynchronous Processing , Administrative  scalability, Geographic scalability,  Authorization, Logging
+  - <b>Website Features</b> :<br> 
+  Service provider features  like Update availability of service provider, Listing the bookings, Getting notifications, Sharing the location on the map , Chat with user, API management , Home page and profile page UI, Backend Integration
+
+- S Harshavardhan
+  - <b>EAD Features</b>: <br>
+  Authorization, Authentication, Application level security,  User data specific sources.
+  - <b>Website Features</b> :<br> 
+  Add reviews to the service provider, Get the location to the service provider, Show service to the provider, update profile, User features,  service provider features- getting the notification,chat with user, location of the user, Book service provider, show bookings
+
+- K.N.D.Pavan Srinivas
+  - <b>EAD Features</b>: <br>
+  Authentication,  Single sign on,   Functional  Scalability,   Administrative  Scalability,  Logging,  Load  Scalability,  Geographic Scalability.
+  - <b>Website features</b> :<br> 
+  User features like book the service provider,  Checking reviews of service provider,  Displays service providers availability & information, Service types provided by service providers, User location,  Reviews on service providers, Look at Service providers in his city,  Update Profile page,  Profile Location page, Contact Page, Google Maps page, Location Page UI, Testing and Bugging with frontend and backend.
 
 ### Project and environment setup
 ```bash
